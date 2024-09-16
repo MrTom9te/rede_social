@@ -5,7 +5,7 @@ body {
 }
 
 .barra-superior {
-  background-color: blueviolet;
+  background-color: rgb(8, 31, 236);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,7 +37,7 @@ body {
   border-radius: 20px 0 0 20px;
 }
 #search-bar:focus {
-  border: 6px solid greenyellow;
+  border: 6px solid #66e6da;
   outline: none;
 }
 .search-button {
@@ -96,13 +96,33 @@ body {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: purple;
+  background-color: #9df9e6;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   width: 300px;
   max-height: 400px;
   overflow-y: auto;
+}
+.list-conf-options {
+  list-style-type: none; /* Remove os marcadores padrão da lista */
+  padding: 0;
+  margin: 0;
+}
+
+.list-conf-options li {
+  margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+}
+
+.list-conf-options a {
+  text-decoration: none; /* Remove a decoração (sublinhado) dos links */
+  color: #333; /* Define a cor do texto */
+  font-size: 16px; /* Tamanho da fonte */
+  font-weight: 500; /* Deixa o texto um pouco mais forte */
+}
+
+.list-conf-options a:hover {
+  color: #007bff; /* Cor ao passar o mouse sobre o link */
 }
 
 .message-window h3,
@@ -110,9 +130,9 @@ body {
 .config-window h3 {
   margin-top: 0;
   padding: 10px;
-  background-color: #8a2be2;
+  background-color: #14c9a4;
   color: white;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 /*
@@ -184,7 +204,6 @@ body {
   padding: 5px;
   border-radius: 50px;
   background-color: #8a2be2;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 footer {
