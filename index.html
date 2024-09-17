@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clean Waves</title>
+    <title>Flow Waves</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +16,10 @@
   <body>
     <header class="barra-superior">
       <div class="logo">
-        <a href="index.html"><img src="assets/logo.svg" alt="Logo" /></a>
+        <a href="index.html">
+          <img src="assets/logo.svg" alt="Logo" />
+          <h3 class="logo-name">Flow Waves</h3>
+        </a>
       </div>
       <div class="search-container">
         <form style="display: flex" action="" method="get">
@@ -62,7 +65,7 @@
           <button id="config-button">
             <img
               class="user-color-svg"
-              src="assets/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+              src="assets/account_circle_30dp_E0000_FILL0_wght400_GRAD0_opsz24.svg"
               alt="Configuração"
             />
           </button>
@@ -80,75 +83,59 @@
     </header>
     <main class="app-page">
       <div class="row">
-        <div class="column" id="friends-page">
-          <h2>Coluna 1</h2>
-          <p>ALguma estrutura</p>
+        <div class="column" id="friends-groups">
+          <div class="friends">
+            <ul>
+              <li>
+                <a href="#">
+                  <div class="friend-block">
+                    <h5>J.Evangelista</h5>
+                    <p>Bom dia</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+
         <div class="column" id="posts-page">
-          <article class="post">
-            <div><h3>NOme do Ususario</h3></div>
-            <div class="post-content">
-              <p>Texto da postagem......</p>
-              <img
-                src="https://picsum.photos/200"
-                alt="imagem do post"
-                class="post-image"
-              />
-            </div>
-            <div class="action-bar">
-              <div class="like">
-                <button class="like-btn">
-                  <img src="assets/heart-regular.svg" alt="curtir" />
-                </button>
-                <h4>curtir</h4>
+          <template id="post-template">
+            <article class="post">
+              <div id="user-data">
+                <h3>NOme do Ususario</h3>
+                <p class="user-handler">@fulano</p>
               </div>
-              <div class="comment">
-                <button class="comment-btn">
-                  <img src="assets/comment-solid.svg " alt="comentar" />
-                </button>
-                <h4>comentar</h4>
+              <div class="post-content">
+                <p>Texto da postagem......</p>
+                <img
+                  src="https://picsum.photos/200"
+                  alt="imagem do post"
+                  class="post-image"
+                />
               </div>
+              <div class="action-bar">
+                <div class="like">
+                  <button class="like-btn">
+                    <img src="assets/heart-regular.svg" alt="curtir" />
+                  </button>
+                  <h4>curtir</h4>
+                </div>
+                <div class="comment">
+                  <button class="comment-btn">
+                    <img src="assets/comment-solid.svg " alt="comentar" />
+                  </button>
+                  <h4>comentar</h4>
+                </div>
 
-              <div class="share">
-                <button class="share-btn">
-                  <img src="assets/share-solid.svg" alt="" />
-                </button>
-                <h4>compartilhar</h4>
+                <div class="share">
+                  <button class="share-btn">
+                    <img src="assets/share-solid.svg" alt="" />
+                  </button>
+                  <h4>compartilhar</h4>
+                </div>
               </div>
-            </div>
-          </article>
-          <article class="post">
-            <div><h3>NOme do Ususario</h3></div>
-            <div class="post-content">
-              <p>Texto da postagem......</p>
-              <img
-                src="https://picsum.photos/200"
-                alt="imagem do post"
-                class="post-image"
-              />
-            </div>
-            <div class="action-bar">
-              <div class="like">
-                <button class="like-btn">
-                  <img src="assets/heart-regular.svg" alt="curtir" />
-                </button>
-                <h4>curtir</h4>
-              </div>
-              <div class="comment">
-                <button class="comment-btn">
-                  <img src="assets/comment-solid.svg " alt="comentar" />
-                </button>
-                <h4>comentar</h4>
-              </div>
-
-              <div class="share">
-                <button class="share-btn">
-                  <img src="assets/share-solid.svg" alt="" />
-                </button>
-                <h4>compartilhar</h4>
-              </div>
-            </div>
-          </article>
+            </article>
+          </template>
         </div>
         <div class="column" id="convervas">
           <h2>Coluna 3</h2>

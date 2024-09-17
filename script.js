@@ -29,3 +29,38 @@ document.addEventListener("click", (event) => {
       });
   }
 });
+
+// Função para criar um novo post usando o template
+function createPost(username, handler, text, imageUrl) {
+  const template = document.getElementById("post-template");
+  const postClone = template.content.cloneNode(true);
+
+  // Preenche os dados do post
+  postClone.querySelector("h3").textContent = username;
+  postClone.querySelector(".user-handler").textContent = handler;
+  postClone.querySelector(".post-content p").textContent = text;
+  postClone.querySelector(".post-image").src = imageUrl;
+
+  // Insere o post clonado na página
+  document.getElementById("posts-page").appendChild(postClone);
+}
+
+// Exemplo de uso
+createPost(
+  "Gabriel Santarem",
+  "@gabriel",
+  "Esse é o meu primeiro post!",
+  "https://picsum.photos/200"
+);
+createPost(
+  "Raffi",
+  "@maria",
+  "Olha essa paisagem incrível!",
+  "https://picsum.photos/200"
+);
+createPost(
+  "J.Evangelista",
+  "@Evqangelista",
+  "Esse é meu primeiro post",
+  "https://picsum.photos/200"
+);

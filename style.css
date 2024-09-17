@@ -9,21 +9,89 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 10px 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 
-  background: linear-gradient(to bottom, #66e6da, #feb47b);
+  background: linear-gradient(to bottom, #66e6da, #9d9d9d);
   border-radius: 0 0 15px 15px;
 }
 .barra-superior:hover {
-  transform: translateY(3px);
+  transform: translateY(-5px);
   transition: transform 0.3s ease-in-out;
 }
 
+/* Estilo do contêiner logo */
 .logo {
-  margin-right: 20px;
+  display: flex;
+  align-items: center; /* Alinha imagem e texto verticalmente */
+  margin-right: 10px;
+  justify-content: center;
 }
 
+.logo a {
+  text-decoration: none;
+  display: flex;
+  align-items: center; /* Alinha imagem e texto dentro da tag <a> */
+  border: none;
+  margin: 0;
+}
+
+.logo img {
+  width: 45px; /* Ajuste o tamanho da logo se necessário */
+  height: auto;
+  margin-right: 8px; /* Espaçamento entre imagem e texto */
+}
+
+/* Estilo do nome da logo */
+.logo-name {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: right;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  animation: flow 3s ease-in-out infinite;
+}
+
+/* Animação de onda no texto */
+@keyframes flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Barra animada abaixo do nome */
+.logo-name::after {
+  content: "";
+  display: block;
+  width: 90px; /* Ajuste conforme necessário */
+  height: 5px;
+  margin: 2px auto;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* barra de busca */
 .search-container {
   display: flex;
   flex-grow: 0;
@@ -145,11 +213,64 @@ body {
 }
 
 .column {
+  margin-top: 30px;
+  justify-content: center;
   text-align: left;
   float: left;
   width: 33%;
 }
-/* maipuland a  area dos post*/
+
+/* coluna amigos e grupos   */
+#friends-groups {
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.friends ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.friends li {
+  margin-bottom: 15px;
+}
+
+.friend-block {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.friend-block h5 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.friend-block p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.friends a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.friends a:hover .friend-block {
+  background-color: #e0e0e0;
+  transition: background-color 0.3s;
+}
+
+/* coluna dos post*/
+
 .post {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -157,6 +278,13 @@ body {
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.user-handler {
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem; /* Tamanho menor que o nome do usuário */
+  color: #555; /* Cor mais clara ou neutra */
+  margin-top: 4px; /* Espaçamento acima do handle */
+  text-align: left; /* Centraliza o texto */
 }
 
 .post h3 {
