@@ -217,15 +217,19 @@ body {
   justify-content: center;
   text-align: left;
   float: left;
-  width: 33%;
+  width: 30%;
+  margin-right: 15px;
 }
 
 /* coluna amigos e grupos   */
 #friends-groups {
+  height: 300px;
+  width: 25%;
   background-color: #f8f8f8;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
 }
 
 .friends ul {

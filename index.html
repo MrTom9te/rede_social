@@ -84,18 +84,34 @@
     <main class="app-page">
       <div class="row">
         <div class="column" id="friends-groups">
-          <div class="friends">
-            <ul>
-              <li>
-                <a href="#">
-                  <div class="friend-block">
-                    <h5>J.Evangelista</h5>
-                    <p>Bom dia</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <template id="friends-groups-template">
+            <div class="friends">
+              <ul>
+                <li>
+                  <a href="#">
+                    <div class="friend-block">
+                      <h5>Username</h5>
+                      <p>text</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </template>
+          <template>
+            <div class="groups">
+              <ul>
+                <li>
+                  <a href="#">
+                    <div class="group-block">
+                      <h5 id="group-name"></h5>
+                      <p id="last-msg">text</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </template>
         </div>
 
         <div class="column" id="posts-page">
@@ -136,6 +152,46 @@
               </div>
             </article>
           </template>
+          <article class="post">
+            <div id="user-data">
+              <h3>NOme do Ususario</h3>
+              <p class="user-handler">@fulano</p>
+            </div>
+            <div class="post-content">
+              <p>Texto da postagem......</p>
+              <iframe
+                width="390"
+                height="200"
+                src="https://www.youtube.com/embed/FKln6pYij3E"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+            <div class="action-bar">
+              <div class="like">
+                <button class="like-btn">
+                  <img src="assets/heart-regular.svg" alt="curtir" />
+                </button>
+                <h4>curtir</h4>
+              </div>
+              <div class="comment">
+                <button class="comment-btn">
+                  <img src="assets/comment-solid.svg " alt="comentar" />
+                </button>
+                <h4>comentar</h4>
+              </div>
+
+              <div class="share">
+                <button class="share-btn">
+                  <img src="assets/share-solid.svg" alt="" />
+                </button>
+                <h4>compartilhar</h4>
+              </div>
+            </div>
+          </article>
         </div>
         <div class="column" id="convervas">
           <h2>Coluna 3</h2>

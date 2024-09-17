@@ -45,12 +45,38 @@ function createPost(username, handler, text, imageUrl) {
   document.getElementById("posts-page").appendChild(postClone);
 }
 
+function getFriends(username, text) {
+  // Obtém o template
+  const template = document.getElementById("friends-groups-template");
+
+  // Clona o conteúdo do template
+  const friendClone = template.content.cloneNode(true);
+
+  // Modifica o conteúdo do clone
+  friendClone.querySelector("h5").textContent = username; // Atualiza o nome
+  friendClone.querySelector("p").textContent = text; // Atualiza a mensagem
+
+  // Adiciona o clone ao DOM dentro da div com id 'friends-groups'
+  const friendsGroups = document.getElementById("friends-groups");
+  friendsGroups.appendChild(friendClone);
+}
+
+// Exemplo de uso:
+getFriends("J.Evangelista", "Bom dia!");
+getFriends("A. Sousa", "Tudo certo?");
+getFriends("J.Evangelista", "Bom dia!");
+getFriends("A. Sousa", "Tudo certo?");
+getFriends("J.Evangelista", "Bom dia!");
+getFriends("A. Sousa", "Tudo certo?");
+getFriends("J.Evangelista", "Bom dia!");
+getFriends("A. Sousa", "Tudo certo?");
+
 // Exemplo de uso
 createPost(
   "Gabriel Santarem",
   "@gabriel",
   "Esse é o meu primeiro post!",
-  "https://picsum.photos/200"
+  "https://picsum.photos/250"
 );
 createPost(
   "Raffi",
@@ -62,5 +88,5 @@ createPost(
   "J.Evangelista",
   "@Evqangelista",
   "Esse é meu primeiro post",
-  "https://picsum.photos/200"
+  "https://picsum.photos/300"
 );
