@@ -1,0 +1,97 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-header {
+  background-image: url("assets/hero-background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  border: dashed blueviolet;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 18px;
+  border: dashed black;
+}
+
+.hero-content {
+  max-width: 600px;
+  border: deepskyblue;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  border: dashed blue;
+}
+
+.hero-content p {
+  border: double blueviolet;
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: black;
+  font-style: italic;
+}
+
+.cta-button {
+  background-color: blueviolet;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: darkviolet;
+}
+
+section#about {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  border: dashed red;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  border: dashed lightblue;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: white;
+}
+
+footer p {
+  margin: 0;
+}
