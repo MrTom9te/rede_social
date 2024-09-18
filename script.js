@@ -42,7 +42,7 @@ function createPost(username, handler, text, imageUrl) {
   postClone.querySelector(".post-image").src = imageUrl;
 
   // Insere o post clonado na página
-  document.getElementById("posts-page").appendChild(postClone);
+  document.getElementById("main-post").appendChild(postClone);
 }
 
 function getFriends(username, text) {
@@ -85,8 +85,50 @@ createPost(
   "https://picsum.photos/200"
 );
 createPost(
-  "J.Evangelista",
-  "@Evqangelista",
+  "J. Evangelista",
+  "@Evangelista",
   "Esse é meu primeiro post",
   "https://picsum.photos/300"
+);
+createPost(
+  "Beatriz M.",
+  "@biazinha",
+  "Acabei de terminar uma maratona!",
+  "https://picsum.photos/220"
+);
+createPost(
+  "Carlos F.",
+  "@cfelipe",
+  "Café da manhã delicioso hoje.",
+  "https://picsum.photos/280"
+);
+createPost(
+  "Fernanda Costa",
+  "@fernandinha",
+  "Curtindo o pôr do sol!",
+  "https://picsum.photos/270"
+);
+createPost(
+  "André Lopes",
+  "@andrelopes",
+  "Check-in no aeroporto, rumo a novas aventuras!",
+  "https://picsum.photos/230"
+);
+createPost(
+  "Laura Pereira",
+  "@laurap",
+  "Desenho novo que fiz hoje!",
+  "https://picsum.photos/210"
+);
+createPost(
+  "Henrique Silva",
+  "@henri_silva",
+  "Foto da minha nova moto!",
+  "https://picsum.photos/240"
+);
+createPost(
+  "Joana F.",
+  "@joanafit",
+  "Treino pesado hoje na academia!",
+  "https://picsum.photos/290"
 );
