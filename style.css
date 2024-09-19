@@ -5,11 +5,9 @@ body {
 }
 
 .barra-superior {
-  background-color: rgb(8, 31, 236);
-  display: flex;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 7px 7px;
@@ -18,12 +16,15 @@ body {
   background: linear-gradient(to bottom, #66e6da, #9d9d9d);
   border-radius: 0 0 15px 15px;
 }
+.barra-superior * {
+  border: dashed yellow;
+}
 
 /* Estilo do contêiner logo */
 .logo {
   display: flex;
   align-items: center; /* Alinha imagem e texto verticalmente */
-  margin-right: 10px;
+  margin-right: 10vh;
   justify-content: center;
 }
 
@@ -38,7 +39,7 @@ body {
 .logo img {
   width: 45px; /* Ajuste o tamanho da logo se necessário */
   height: auto;
-  margin-right: 8px; /* Espaçamento entre imagem e texto */
+  /* Espaçamento entre imagem e texto */
 }
 
 /* Estilo do nome da logo */
@@ -68,10 +69,10 @@ body {
 }
 
 /* Barra animada abaixo do nome */
-.logo-name::after {
+/*.logo-name::after {
   content: "";
   display: block;
-  width: 90px; /* Ajuste conforme necessário */
+  width: 90px;
   height: 5px;
   margin: 2px auto;
   background: linear-gradient(90deg, #00c6ff, #0072ff);
@@ -88,7 +89,7 @@ body {
   100% {
     transform: scaleX(1);
   }
-}
+} */
 
 /* barra de busca */
 .search-container {
@@ -99,7 +100,7 @@ body {
 
 #search-bar {
   width: calc(100% - 40px);
-  padding: 8px 12px;
+  padding: 1vh 3vw;
   border: none;
   border-radius: 20px 0 0 20px;
 }
@@ -232,6 +233,9 @@ body {
   position: sticky;
   scrollbar-width: none;
   top: 90px;
+}
+#friends-groups * {
+  border: dashed red;
 }
 
 .friends ul {
