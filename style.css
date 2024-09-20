@@ -4,6 +4,17 @@ body {
   padding: 0;
 }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .barra-superior {
   position: sticky;
   top: 0;
@@ -15,9 +26,11 @@ body {
 
   background: linear-gradient(to bottom, #66e6da, #9d9d9d);
   border-radius: 0 0 15px 15px;
+
+  animation: wave-animation 1.5s infinite linear;
 }
-.barra-superior * {
-  border: dashed yellow;
+.barra-superior:nth-child(2) {
+  animation-delay: 0.5s;
 }
 
 /* Estilo do contêiner logo */
@@ -99,16 +112,20 @@ body {
 }
 
 #search-bar {
-  width: calc(100% - 40px);
-  padding: 1vh 3vw;
-  border: none;
-  border-radius: 20px 0 0 20px;
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 15px;
+  border: 1px solid #e1e8ed;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: #f5f8fa;
 }
 #search-bar:focus {
   border: 6px solid #66e6da;
   outline: none;
 }
 .search-button {
+  display: none;
   padding: 8px 12px;
   background-color: #ddd;
   border: none;
