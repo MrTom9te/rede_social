@@ -4,7 +4,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: #363636;
+  display: flex;
 }
+
 .watermark-container {
   background-image: url("assets/logo.png");
   background-repeat: no-repeat;
@@ -19,16 +21,15 @@ body {
   z-index: -1;
 }
 
-/* Header and Navigation */
+/* Header e Nav */
 .barra-superior {
   display: flex;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
+  width: 100vw;
   top: 0;
   padding: 7px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   background: #6af3e5bd;
-  border-radius: 0 0 15px 15px;
   z-index: 100;
 }
 
@@ -51,7 +52,6 @@ body {
   text-align: right;
   background: linear-gradient(90deg, #00c6ff, #0072ff);
   background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -59,17 +59,16 @@ body {
   animation: flow 3s ease-in-out infinite;
 }
 
-/* Search bar */
+/* Barra de pesquisa*/
 .search-container {
   flex-grow: 0;
   max-width: 400px;
 }
 
 #search-bar {
-  background-color: #352f2f; /* Cor de fundo mais escura */
-  color: #e0e0e0; /* Texto claro */
-  border-color: #4a4a4a; /* Borda mais suave */
-
+  background-color: #352f2f;
+  color: #e0e0e0;
+  border-color: #4a4a4a;
   width: 100%;
   max-width: 400px;
   padding: 8px 15px;
@@ -83,12 +82,14 @@ body {
   border-color: #66e6da;
   outline: none;
 }
+
 .search-button {
   display: none;
 }
 
-/* Options bar */
+/* Barra de Opções */
 .options-bar {
+  margin-right: 3vw;
   display: flex;
   align-items: center;
 }
@@ -119,7 +120,7 @@ body {
   width: 30px;
 }
 
-/* Floating windows */
+/* Janelas flutuantes */
 .message-window,
 .notify-window,
 .config-window {
@@ -146,59 +147,35 @@ body {
   border-radius: 15px;
 }
 
-/* Main content area */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+/* Area de conteudo da Main */
+#app-page {
+  display: flex;
+}
+/* Coluna trending */
+#trending {
+  justify-content: center;
+  display: flex;
+  width: 33vw;
+  height: 100vh;
 }
 
-.column {
-  float: left;
-  width: 30%;
-  margin: 30px 15px 0 0;
-}
-
-.column:nth-child(3) {
-  justify-content: right;
-}
 /* Friends and Groups column */
-/* essa porra so me da raiva, NADA QUE È DO POBRE FUNCIONA PORRA !!!!!!!*/
 #friends-groups {
-  position: fixed; /* Fixa a coluna na tela */
-  right: 0; /* Coloca no lado direito */
-  top: 60px; /* Define a distância do topo (ajuste conforme necessário) */
-  bottom: 1vh;
-  width: 25vw; /* Defina a largura da coluna */
-  height: calc(
-    90vh - 60px
-  ); /* Calcula a altura com base na altura da janela de visualização */
-  background-color: #6666; /* Cor de fundo, ajuste se necessário */
-  overflow-y: auto; /* Permite rolar se o conteúdo for maior que a altura da tela */
+  position: fixed;
+  right: 0;
+  top: 60px;
+  bottom: 2vh;
+  width: 25vw;
+  height: calc(90vh - 60px);
+  background-color: #6666;
+  overflow-y: auto;
   padding: 20px;
-  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para destaque */
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
   border-radius: 2vh;
-
-  /*
-  GUARDA PRA CASO PRECISE 
-  padding: 0%;
-  margin-right: 0%;
-  height: 300px;
-  background-color: #0c0101a2;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow-y: scroll;
-  position: sticky;
-  scrollbar-width: none;
-  top: 90px;
-  right: 0px;
-  */
 }
 
 .friend-block {
   display: flex;
-
   background-color: lightblue;
   padding: 10px;
   border-radius: 8px;
@@ -223,9 +200,9 @@ body {
   transition: background-color 0.3s;
 }
 
-/* Posts column */
+/* Posts coluna */
 .post {
-  margin: 10px 0;
+  width: 33vw;
   background-color: #2e6c70b0;
   padding: 10px;
   border-radius: 8px;
@@ -233,11 +210,9 @@ body {
 }
 
 .user-handler {
-  font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
   color: #000000;
   margin-top: 4px;
-  text-align: left;
 }
 
 .post h3 {
@@ -267,18 +242,6 @@ body {
   justify-content: space-evenly;
 }
 
-.action-bar div {
-  display: flex;
-  padding: 10px;
-  align-items: center;
-}
-
-.action-bar div h4 {
-  color: #666;
-  padding: 3px;
-  font-size: 15px;
-}
-
 .action-bar button {
   border: none;
   background-color: transparent;
@@ -290,7 +253,7 @@ body {
   border-radius: 50%;
 }
 
-/* Conversations column */
+/* Conversas */
 #conversas {
   border: dashed red;
   padding: 20px;
@@ -298,14 +261,7 @@ body {
   border-radius: 8px;
 }
 
-#conversas h2 {
-  font-size: 1.5rem;
-  color: #1a73e8;
-  margin-bottom: 15px;
-}
-
 .chat-list {
-  border: dashed rebeccapurple;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -335,7 +291,6 @@ body {
 .chat-name {
   font-size: 1rem;
   color: #333;
-  margin-bottom: 5px;
 }
 
 .chat-last-message {
@@ -369,8 +324,6 @@ footer p,
 footer ul,
 footer li {
   font-size: 14px;
-  line-height: 1.6;
-  margin: 0;
   color: #555;
 }
 
@@ -392,101 +345,11 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Hero section */
-.hero-header {
-  background: linear-gradient(to right, #007cf0, #00dfd8);
-  height: 100vh;
-  color: white;
-  position: relative;
-}
-
-.navbar {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  padding: 20px 50px;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 10px 20px;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
-}
-
-.menu a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.hero-content h1 {
-  font-size: 56px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  animation: fadeInUp 1s ease-in-out;
-}
-
-.hero-content p {
-  font-size: 20px;
-  margin-bottom: 30px;
-  color: #e0e0e0;
-}
-
-.cta-button {
-  background-color: #fff;
-  color: #007cf0;
-  padding: 14px 40px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 700;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #e0e0e0;
-}
-
-.scroll-indicator {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  color: white;
-  animation: bounce 2s infinite;
-}
-
-.scroll-indicator .arrow-down {
-  width: 30px;
-  height: 30px;
-  border-right: 3px solid white;
-  border-bottom: 3px solid white;
-  transform: rotate(45deg);
-  margin: 10px auto;
-}
-
-/* About section */
-#about {
-  padding: 60px 20px;
-  background-color: #fff;
-  text-align: center;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
 /* Responsive design */
 @media (max-width: 768px) {
   .column,
   #friends-groups {
     width: 100%;
-    margin-right: 0;
   }
 
   footer {
@@ -509,13 +372,5 @@ footer a:hover {
   .menu a {
     display: block;
     margin: 10px 0;
-  }
-
-  .hero-content h1 {
-    font-size: 40px;
-  }
-
-  .hero-content p {
-    font-size: 18px;
   }
 }

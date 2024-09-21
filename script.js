@@ -47,7 +47,7 @@ function createPost(username, handler, text, imageUrl) {
 
 function getFriends(username, text) {
   // Obtém o template
-  const template = document.getElementById("friends-groups-template");
+  const template = document.getElementById("friends-template");
 
   // Clona o conteúdo do template
   const friendClone = template.content.cloneNode(true);
