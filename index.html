@@ -18,25 +18,26 @@
       <div class="logo">
         <a href="index.html">
           <img src="assets/logo.svg" alt="Logo" />
-          <!-- <h3 class="logo-name">Flow Waves</h3> -->
         </a>
       </div>
       <div class="search-container">
-        <form style="display: flex" action="" method="get">
+        <form action="" method="get">
           <input type="text" id="search-bar" placeholder="pesquisar..." />
-          <button class="search-button" type="submit">buscar</button>
+          <button class="search-button" type="submit">Buscar</button>
         </form>
       </div>
       <div class="options-bar">
         <div class="option-message">
           <button id="message-button">
-            <img src="assets/envelope-solid.svg" alt="mensagens" />
+            <img src="assets/envelope-solid.svg" alt="Mensagens" />
           </button>
-          <div class="message-window"><h3>Mensagens</h3></div>
+          <div class="message-window">
+            <h3>Mensagens</h3>
+          </div>
         </div>
         <div class="option-notifications">
           <button id="notify-button">
-            <img src="assets/bell-regular.svg" alt="" />
+            <img src="assets/bell-regular.svg" alt="Notificações" />
           </button>
           <div class="notify-window">
             <h3>Notificações</h3>
@@ -49,22 +50,12 @@
                 </p>
               </div>
             </div>
-            <div class="notification-obj">
-              <img src="https://picsum.photos/32" alt="avatar-icon" />
-              <div class="notification-content">
-                <p class="sender-name">Gabriel Santarem</p>
-                <p class="notification-text">
-                  Enviou uma nova mensagem para você.
-                </p>
-              </div>
-            </div>
+            <!-- Mais notificações aqui -->
           </div>
         </div>
-
         <div class="option-config">
           <button id="config-button">
             <img
-              class="user-color-svg"
               src="assets/account_circle_30dp_E0000_FILL0_wght400_GRAD0_opsz24.svg"
               alt="Configuração"
             />
@@ -72,10 +63,10 @@
           <div class="config-window">
             <h3>Configurações</h3>
             <ul class="list-conf-options">
-              <li><a href="">Meu perfil</a></li>
-              <li><a href="login/login.html"> Login</a></li>
-              <li><a href="">Configurações</a></li>
-              <li><a href="">Sair</a></li>
+              <li><a href="#">Meu perfil</a></li>
+              <li><a href="login/login.html">Login</a></li>
+              <li><a href="#">Configurações</a></li>
+              <li><a href="#">Sair</a></li>
             </ul>
           </div>
         </div>
@@ -83,40 +74,25 @@
     </header>
 
     <main class="app-page">
-      <div class="row">
-        <div class="column" id="friends-groups">
-          <template id="friends-groups-template">
-            <div class="friends">
-              <div class="friend-block">
-                <a href="">
-                  <h5>Username</h5>
-                  <p>text</p>
-                </a>
-              </div>
-            </div>
-          </template>
-          <template>
-            <div class="groups">
-              <div class="group-block">
-                <a href="">
-                  <h5 id="group-name"></h5>
-                  <p id="last-msg">text</p>
-                </a>
-              </div>
-            </div>
-          </template>
-        </div>
+      <div class="watermark-container">
+        <!-- Seu conteúdo da página -->
+      </div>
 
+      <div class="row">
+        <!-- Coluna Amigos e Grupos -->
+        <div class="column" id=""></div>
+
+        <!-- Coluna Postagens -->
         <div class="column" id="posts-page">
           <div id="main-post">
             <template id="post-template">
               <article class="post">
                 <div id="user-data">
-                  <h3>NOme do Ususario</h3>
+                  <h3>Nome do Usuário</h3>
                   <p class="user-handler">@fulano</p>
                 </div>
                 <div class="post-content">
-                  <p>Texto da postagem......</p>
+                  <p>Texto da postagem...</p>
                   <img
                     src="https://picsum.photos/200"
                     alt="imagem do post"
@@ -124,119 +100,57 @@
                   />
                 </div>
                 <div class="action-bar">
-                  <div class="like">
-                    <button class="like-btn">
-                      <img src="assets/heart-regular.svg" alt="curtir" />
-                    </button>
-                    <h4>curtir</h4>
-                  </div>
-                  <div class="comment">
-                    <button class="comment-btn">
-                      <img src="assets/comment-solid.svg " alt="comentar" />
-                    </button>
-                    <h4>comentar</h4>
-                  </div>
-
-                  <div class="share">
-                    <button class="share-btn">
-                      <img src="assets/share-solid.svg" alt="" />
-                    </button>
-                    <h4>compartilhar</h4>
-                  </div>
+                  <button class="like-btn">
+                    <img src="assets/heart-regular.svg" alt="Curtir" />
+                  </button>
+                  <button class="comment-btn">
+                    <img src="assets/comment-solid.svg" alt="Comentar" />
+                  </button>
+                  <button class="share-btn">
+                    <img src="assets/share-solid.svg" alt="Compartilhar" />
+                  </button>
                 </div>
               </article>
             </template>
           </div>
-          <article class="post">
-            <div id="user-data">
-              <h3>NOme do Ususario</h3>
-              <p class="user-handler">@fulano</p>
-            </div>
-            <div class="post-content">
-              <p>Texto da postagem......</p>
-              <iframe
-                width="390"
-                height="200"
-                src="https://www.youtube.com/embed/FKln6pYij3E"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              >
-              </iframe>
-            </div>
-            <div class="action-bar">
-              <div class="like">
-                <button class="like-btn">
-                  <img src="assets/heart-regular.svg" alt="curtir" />
-                </button>
-                <h4>curtir</h4>
-              </div>
-              <div class="comment">
-                <button class="comment-btn">
-                  <img src="assets/comment-solid.svg " alt="comentar" />
-                </button>
-                <h4>comentar</h4>
-              </div>
-
-              <div class="share">
-                <button class="share-btn">
-                  <img src="assets/share-solid.svg" alt="" />
-                </button>
-                <h4>compartilhar</h4>
-              </div>
-            </div>
-          </article>
         </div>
-        <div class="column" id="convervas">
-          <h2>Coluna 3</h2>
-          <p>Alguma estrutura</p>
+
+        <!-- Coluna Conversas -->
+
+        <div class="column" id="friends-groups">
+          <div class="groups-chats">
+            <h3>Conversas</h3>
+            <h3>grupos</h3>
+          </div>
+          <template id="friends-groups-template">
+            <div class="friends">
+              <div class="friend-block">
+                <img
+                  src="https://picsum.photos/40"
+                  alt="Avatar do Usuário"
+                  class="chat-avatar"
+                />
+                <a href="#">
+                  <h5>Username</h5>
+                  <p>Status ou última mensagem...</p>
+                </a>
+              </div>
+            </div>
+          </template>
+          <template id="groups-template">
+            <div class="groups">
+              <div class="group-block">
+                <a href="#">
+                  <h5 id="group-name">Nome do Grupo</h5>
+                  <p id="last-msg">Última mensagem...</p>
+                </a>
+              </div>
+            </div>
+          </template>
         </div>
       </div>
     </main>
-    <!-- <footer>
-      <div>
-        <h4>Sobre nós</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-          tincidunt, arcu ac tincidunt pharetra, ex lacus blandit purus.
-        </p>
-      </div>
 
-      <div>
-        <h4>Serviços</h4>
-        <ul>
-          <li>Vestibulum ante</li>
-          <li>Praesent scelerisque</li>
-          <li>Cras mattis consectetur</li>
-          <li>Nulla vitae elit libero</li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Suporte</h4>
-        <p>Telefone: (000) 000-0000</p>
-        <p>Email: exemplo@exemplo.com</p>
-        <p>Horário de atendimento: 9:00 - 18:00 (seg-sex)</p>
-      </div>
-
-      <div>
-        <h4>Redes Sociais</h4>
-        <ul>
-          <li>Facebook</li>
-          <li>Instagram</li>
-          <li>Twitter</li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Termos e Condições</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          posuere erat a ante venenatis dapibus posuere velit aliquet.
-        </p>
-      </div>
-    </footer> -->
     <script src="script.js"></script>
   </body>
 </html>

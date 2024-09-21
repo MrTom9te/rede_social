@@ -1,63 +1,51 @@
+/* Base styles */
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #363636;
+}
+.watermark-container {
+  background-image: url("assets/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
+/* Header and Navigation */
 .barra-superior {
+  display: flex;
+  justify-content: space-between;
   position: sticky;
   top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 7px 7px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-
-  background: linear-gradient(to bottom, #66e6da, #9d9d9d);
+  padding: 7px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: #6af3e5bd;
   border-radius: 0 0 15px 15px;
-
-  animation: wave-animation 1.5s infinite linear;
-}
-.barra-superior:nth-child(2) {
-  animation-delay: 0.5s;
+  z-index: 100;
 }
 
-/* Estilo do contêiner logo */
 .logo {
-  display: flex;
-  align-items: center; /* Alinha imagem e texto verticalmente */
   margin-right: 10vh;
-  justify-content: center;
 }
 
 .logo a {
   text-decoration: none;
-  display: flex;
-  align-items: center; /* Alinha imagem e texto dentro da tag <a> */
-  border: none;
-  margin: 0;
 }
 
 .logo img {
-  width: 45px; /* Ajuste o tamanho da logo se necessário */
+  width: 45px;
   height: auto;
-  /* Espaçamento entre imagem e texto */
 }
 
-/* Estilo do nome da logo */
 .logo-name {
-  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: bold;
   text-align: right;
@@ -71,69 +59,35 @@ body {
   animation: flow 3s ease-in-out infinite;
 }
 
-/* Animação de onda no texto */
-@keyframes flow {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
-/* Barra animada abaixo do nome */
-/*.logo-name::after {
-  content: "";
-  display: block;
-  width: 90px;
-  height: 5px;
-  margin: 2px auto;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  animation: wave 2s ease-in-out infinite;
-}
-
-@keyframes wave {
-  0% {
-    transform: scaleX(1);
-  }
-  50% {
-    transform: scaleX(1.5);
-  }
-  100% {
-    transform: scaleX(1);
-  }
-} */
-
-/* barra de busca */
+/* Search bar */
 .search-container {
-  display: flex;
   flex-grow: 0;
   max-width: 400px;
 }
 
 #search-bar {
+  background-color: #352f2f; /* Cor de fundo mais escura */
+  color: #e0e0e0; /* Texto claro */
+  border-color: #4a4a4a; /* Borda mais suave */
+
   width: 100%;
   max-width: 400px;
   padding: 8px 15px;
-  border: 1px solid #e1e8ed;
+  border: 1px solid lightblue;
   border-radius: 20px;
   font-size: 16px;
   background-color: #f5f8fa;
 }
+
 #search-bar:focus {
-  border: 6px solid #66e6da;
+  border-color: #66e6da;
   outline: none;
 }
 .search-button {
   display: none;
-  padding: 8px 12px;
-  background-color: #ddd;
-  border: none;
-  border-radius: 0 20px 20px 0;
-  cursor: pointer;
-  font-size: 16px;
 }
 
+/* Options bar */
 .options-bar {
   display: flex;
   align-items: center;
@@ -146,34 +100,26 @@ body {
   margin-left: 20px;
   color: white;
   cursor: pointer;
-}
-.option-message,
-.option-notifications,
-.option-config {
   position: relative;
 }
 
-#config-button,
-#message-button,
-#notify-button {
+.options-bar button {
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
-.options-bar div button img {
-  height: 30px;
-  width: 30px;
-}
 
-/*   conf para oss botoes */
-#notify-button:hover,
-#config-button:hover,
-#message-button:hover {
+.options-bar button:hover {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
 
-/*  configurações das janelas flutuantes  */
+.options-bar button img {
+  height: 30px;
+  width: 30px;
+}
+
+/* Floating windows */
 .message-window,
 .notify-window,
 .config-window {
@@ -189,26 +135,6 @@ body {
   max-height: 400px;
   overflow-y: auto;
 }
-.list-conf-options {
-  list-style-type: none; /* Remove os marcadores padrão da lista */
-  padding: 0;
-  margin: 0;
-}
-
-.list-conf-options li {
-  margin-bottom: 10px; /* Espaçamento entre os itens da lista */
-}
-
-.list-conf-options a {
-  text-decoration: none; /* Remove a decoração (sublinhado) dos links */
-  color: #333; /* Define a cor do texto */
-  font-size: 16px; /* Tamanho da fonte */
-  font-weight: 500; /* Deixa o texto um pouco mais forte */
-}
-
-.list-conf-options a:hover {
-  color: #007bff; /* Cor ao passar o mouse sobre o link */
-}
 
 .message-window h3,
 .notify-window h3,
@@ -220,29 +146,45 @@ body {
   border-radius: 15px;
 }
 
-/*
-   Area da main
-*/
+/* Main content area */
 .row:after {
   content: "";
-  display: flex;
+  display: table;
   clear: both;
 }
 
 .column {
-  margin-top: 30px;
-  justify-content: center;
-  text-align: left;
   float: left;
   width: 30%;
-  margin-right: 15px;
+  margin: 30px 15px 0 0;
 }
 
-/* coluna amigos e grupos   */
+.column:nth-child(3) {
+  justify-content: right;
+}
+/* Friends and Groups column */
+/* essa porra so me da raiva, NADA QUE È DO POBRE FUNCIONA PORRA !!!!!!!*/
 #friends-groups {
+  position: fixed; /* Fixa a coluna na tela */
+  right: 0; /* Coloca no lado direito */
+  top: 60px; /* Define a distância do topo (ajuste conforme necessário) */
+  bottom: 1vh;
+  width: 25vw; /* Defina a largura da coluna */
+  height: calc(
+    90vh - 60px
+  ); /* Calcula a altura com base na altura da janela de visualização */
+  background-color: #6666; /* Cor de fundo, ajuste se necessário */
+  overflow-y: auto; /* Permite rolar se o conteúdo for maior que a altura da tela */
+  padding: 20px;
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para destaque */
+  border-radius: 2vh;
+
+  /*
+  GUARDA PRA CASO PRECISE 
+  padding: 0%;
+  margin-right: 0%;
   height: 300px;
-  width: 25%;
-  background-color: #f8f8f8;
+  background-color: #0c0101a2;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -250,28 +192,18 @@ body {
   position: sticky;
   scrollbar-width: none;
   top: 90px;
-}
-#friends-groups * {
-  border: dashed red;
-}
-
-.friends ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.friends li {
-  margin-bottom: 15px;
+  right: 0px;
+  */
 }
 
 .friend-block {
   display: flex;
-  flex-direction: column;
+
   background-color: lightblue;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
 }
 
 .friend-block h5 {
@@ -286,45 +218,41 @@ body {
   color: #666;
 }
 
-.friends a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .friends a:hover .friend-block {
   background-color: #e0e0e0;
   transition: background-color 0.3s;
 }
 
-/* coluna dos post*/
-
+/* Posts column */
 .post {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: #f9f9f9;
+  margin: 10px 0;
+  background-color: #2e6c70b0;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .user-handler {
-  font-family: Arial, sans-serif;
-  font-size: 0.9rem; /* Tamanho menor que o nome do usuário */
-  color: #555; /* Cor mais clara ou neutra */
-  margin-top: 4px; /* Espaçamento acima do handle */
-  text-align: left; /* Centraliza o texto */
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  color: #000000;
+  margin-top: 4px;
+  text-align: left;
 }
 
 .post h3 {
   font-size: 20px;
   margin: 0;
-  color: #333;
+  color: #ffffff;
 }
+
 .post-content {
   margin-top: 10px;
 }
+
 .post-content p {
   font-size: 16px;
-  color: #666;
+  color: #ffffff;
 }
 
 .post-image {
@@ -333,39 +261,93 @@ body {
   height: auto;
   border-radius: 8px;
 }
-.action-bar div button {
-  border: none;
-  background-color: transparent;
-  width: 30px;
-  height: 30px;
-}
+
 .action-bar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
+
 .action-bar div {
   display: flex;
   padding: 10px;
   align-items: center;
 }
+
 .action-bar div h4 {
   color: #666;
   padding: 3px;
   font-size: 15px;
 }
-.like-btn:hover,
-.comment-btn:hover,
-.share-btn:hover {
-  padding: 5px;
-  border-radius: 50px;
-  background-color: #8a2be2;
+
+.action-bar button {
+  border: none;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
 }
 
+.action-bar button:hover {
+  border-radius: 50%;
+}
+
+/* Conversations column */
+#conversas {
+  border: dashed red;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+#conversas h2 {
+  font-size: 1.5rem;
+  color: #1a73e8;
+  margin-bottom: 15px;
+}
+
+.chat-list {
+  border: dashed rebeccapurple;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.chat-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.chat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-name {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.chat-last-message {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Footer */
 footer {
   background: linear-gradient(to bottom, #66e6da, #feb47b);
   padding: 40px 20px;
   color: #333;
-  font-family: Arial, sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -410,33 +392,10 @@ footer a:hover {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  footer {
-    flex-direction: column;
-  }
-
-  footer div {
-    max-width: 100%;
-  }
-}
-
-/* homepage */
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f9;
-}
-
+/* Hero section */
 .hero-header {
-  border: dashed red;
   background: linear-gradient(to right, #007cf0, #00dfd8);
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   color: white;
   position: relative;
 }
@@ -445,13 +404,7 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
   padding: 20px 50px;
-}
-
-.logo img {
-  height: 50px;
 }
 
 .menu a {
@@ -469,9 +422,6 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.hero-content {
-  display: flex;
-}
 .hero-content h1 {
   font-size: 56px;
   font-weight: 700;
@@ -486,7 +436,6 @@ body {
 }
 
 .cta-button {
-  position: relative;
   background-color: #fff;
   color: #007cf0;
   padding: 14px 40px;
@@ -504,6 +453,8 @@ body {
 .scroll-indicator {
   position: absolute;
   bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   color: white;
   animation: bounce 2s infinite;
@@ -518,23 +469,8 @@ body {
   margin: 10px auto;
 }
 
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
-}
-
-section#about {
+/* About section */
+#about {
   padding: 60px 20px;
   background-color: #fff;
   text-align: center;
@@ -545,35 +481,41 @@ section#about {
   margin: 0 auto;
 }
 
-footer {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-.footer-links {
-  margin-bottom: 10px;
-}
-
-.footer-links a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 14px;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 40px, 0);
+/* Responsive design */
+@media (max-width: 768px) {
+  .column,
+  #friends-groups {
+    width: 100%;
+    margin-right: 0;
   }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer div {
+    max-width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    margin-top: 20px;
+  }
+
+  .menu a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
   }
 }
