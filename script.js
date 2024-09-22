@@ -30,6 +30,38 @@ document.addEventListener("click", (event) => {
   }
 });
 
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log("Usuários:", data); // Mostra os dados no console
+    const cgArea = document.getElementById("cg-area");
+    data.forEach((user) => {
+      const template = document
+        .getElementById("friends-template")
+        .content.cloneNode(true);
+      template.querySelector("h5").textContent = user.username;
+      template.querySelector("p").textContent = "Online"; // ou outra mensagem fictícia
+      cgArea.appendChild(template);
+    });
+  })
+  .catch((error) => console.error("Erro ao buscar usuários:", error));
+
+fetch("https://jsonplaceholder.typicode.com/posts")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log("Postagens:", data); // Mostra os dados no console
+    const postsPage = document.getElementById("posts-page");
+    data.forEach((post) => {
+      const template = document
+        .getElementById("post-template")
+        .content.cloneNode(true);
+      template.querySelector("h3").textContent = "Usuário " + post.userId; // Substitua conforme necessário
+      template.querySelector(".post-content p").textContent = post.body;
+      postsPage.appendChild(template);
+    });
+  })
+  .catch((error) => console.error("Erro ao buscar postagens:", error));
+
 // Função para criar um novo post usando o template
 function createPost(username, handler, text, imageUrl) {
   const template = document.getElementById("post-template");
@@ -60,75 +92,3 @@ function getFriends(username, text) {
   const friendsGroups = document.getElementById("cg-area");
   friendsGroups.appendChild(friendClone);
 }
-
-// Exemplo de uso:
-getFriends("J.Evangelista", "Bom dia!");
-getFriends("A. Sousa", "Tudo certo?");
-getFriends("J.Evangelista", "Bom dia!");
-getFriends("A. Sousa", "Tudo certo?");
-getFriends("J.Evangelista", "Bom dia!");
-getFriends("A. Sousa", "Tudo certo?");
-getFriends("J.Evangelista", "Bom dia!");
-getFriends("A. Sousa", "Tudo certo?");
-
-// Exemplo de uso
-createPost(
-  "Gabriel Santarem",
-  "@gabriel",
-  "Esse é o meu primeiro post!",
-  "https://picsum.photos/250"
-);
-createPost(
-  "Raffi",
-  "@maria",
-  "Olha essa paisagem incrível!",
-  "https://picsum.photos/200"
-);
-createPost(
-  "J. Evangelista",
-  "@Evangelista",
-  "Esse é meu primeiro post",
-  "https://picsum.photos/300"
-);
-createPost(
-  "Beatriz M.",
-  "@biazinha",
-  "Acabei de terminar uma maratona!",
-  "https://picsum.photos/220"
-);
-createPost(
-  "Carlos F.",
-  "@cfelipe",
-  "Café da manhã delicioso hoje.",
-  "https://picsum.photos/280"
-);
-createPost(
-  "Fernanda Costa",
-  "@fernandinha",
-  "Curtindo o pôr do sol!",
-  "https://picsum.photos/270"
-);
-createPost(
-  "André Lopes",
-  "@andrelopes",
-  "Check-in no aeroporto, rumo a novas aventuras!",
-  "https://picsum.photos/230"
-);
-createPost(
-  "Laura Pereira",
-  "@laurap",
-  "Desenho novo que fiz hoje!",
-  "https://picsum.photos/210"
-);
-createPost(
-  "Henrique Silva",
-  "@henri_silva",
-  "Foto da minha nova moto!",
-  "https://picsum.photos/240"
-);
-createPost(
-  "Joana F.",
-  "@joanafit",
-  "Treino pesado hoje na academia!",
-  "https://picsum.photos/290"
-);
