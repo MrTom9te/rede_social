@@ -151,58 +151,26 @@ body {
 #app-page {
   display: flex;
 }
+
 /* Coluna trending */
 #trending {
+  border: dashed red;
   justify-content: center;
   display: flex;
+  margin-top: 6vh;
   width: 33vw;
   height: 100vh;
 }
 
-/* Friends and Groups column */
-#friends-groups {
-  position: fixed;
-  right: 0;
-  top: 60px;
-  bottom: 2vh;
-  width: 25vw;
-  height: calc(90vh - 60px);
-  background-color: #6666;
-  overflow-y: auto;
-  padding: 20px;
-  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 2vh;
-}
-
-.friend-block {
-  display: flex;
-  background-color: lightblue;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  margin-bottom: 15px;
-}
-
-.friend-block h5 {
-  margin: 0;
-  font-size: 14px;
-  color: #333;
-}
-
-.friend-block p {
-  margin: 5px 0 0;
-  font-size: 11px;
-  color: #666;
-}
-
-.friends a:hover .friend-block {
-  background-color: #e0e0e0;
-  transition: background-color 0.3s;
-}
-
 /* Posts coluna */
+#posts-page {
+  margin-top: 10vh;
+  width: 35vw;
+}
 .post {
-  width: 33vw;
+  margin-right: 0;
+  margin-bottom: 1vh;
+  width: 96%;
   background-color: #2e6c70b0;
   padding: 10px;
   border-radius: 8px;
@@ -253,50 +221,63 @@ body {
   border-radius: 50%;
 }
 
-/* Conversas */
-#conversas {
-  border: dashed red;
-  padding: 20px;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-}
+/* Conversas  e Grupos*/
 
-.chat-list {
+#friends-groups {
+  position: fixed;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  right: 1vw;
+  top: 10vh;
+  bottom: 2vh;
+  width: 25vw;
+  height: calc(90vh - 60px);
+  background-color: #6666;
+  overflow-y: auto;
+  padding: 20px;
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 2vh;
+  justify-content: center;
 }
+#chats-groups {
+  position: absolute;
 
-.chat-item {
+  width: 99%;
+  border: dashed red;
   display: flex;
-  align-items: center;
+  justify-content: space-around;
+}
+/* Friend Block */
+.friend-block {
+  width: 95%;
+  flex-wrap: wrap; /* Adicionado para corrigir flex-wrap */
+  height: auto; /* Alterado para ajustar à altura do conteúdo */
+  display: flex;
+  background-color: lightblue; /* Corrigido o uso de dois pontos */
   padding: 10px;
   border-radius: 8px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
 }
 
-.chat-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 15px;
-}
-
-.chat-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.chat-name {
-  font-size: 1rem;
+.friend-block h5 {
+  margin: 0;
+  font-size: 14px;
   color: #333;
 }
 
-.chat-last-message {
-  font-size: 0.9rem;
+.friend-block p {
+  margin: 5px 0 0;
+  font-size: 11px;
   color: #666;
 }
+
+.friends a:hover .friend-block {
+  background-color: #e0e0e0;
+  transition: background-color 0.3s;
+}
+
+/* Conversations Block */
 
 /* Footer */
 footer {

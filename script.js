@@ -57,7 +57,7 @@ function getFriends(username, text) {
   friendClone.querySelector("p").textContent = text; // Atualiza a mensagem
 
   // Adiciona o clone ao DOM dentro da div com id 'friends-groups'
-  const friendsGroups = document.getElementById("friends-groups");
+  const friendsGroups = document.getElementById("cg-area");
   friendsGroups.appendChild(friendClone);
 }
 

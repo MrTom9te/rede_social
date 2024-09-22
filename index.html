@@ -83,72 +83,75 @@
 
       <!-- Coluna Postagens -->
       <div id="posts-page">
-        <div id="main-post">
-          <template id="post-template">
-            <article class="post">
-              <div id="user-data">
-                <h3>Nome do Usuário</h3>
-                <p class="user-handler">@fulano</p>
-              </div>
-              <div class="post-content">
-                <p>Texto da postagem...</p>
-                <img
-                  src="https://picsum.photos/200"
-                  alt="imagem do post"
-                  class="post-image"
-                />
-              </div>
-              <div class="action-bar">
-                <button class="like-btn">
-                  <img src="assets/heart-regular.svg" alt="Curtir" />
-                </button>
-                <button class="comment-btn">
-                  <img src="assets/comment-solid.svg" alt="Comentar" />
-                </button>
-                <button class="share-btn">
-                  <img src="assets/share-solid.svg" alt="Compartilhar" />
-                </button>
-              </div>
-            </article>
-          </template>
-        </div>
+        <div id="main-post"></div>
       </div>
 
       <!-- Coluna Conversas -->
 
       <div class="column" id="friends-groups">
         <div class="groups-chats">
-          <h3>Conversas</h3>
-          <h3>grupos</h3>
+          <div id="chats-groups">
+            <h3>Conversas</h3>
+            <h3>Grupos</h3>
+          </div>
+          <div id="cg-area"></div>
         </div>
-        <template id="friends-template">
-          <div class="friends">
-            <div class="friend-block">
-              <img
-                src="https://picsum.photos/40"
-                alt="Avatar do Usuário"
-                class="chat-avatar"
-              />
-              <a href="#">
-                <h5>Username</h5>
-                <p>Status ou última mensagem...</p>
-              </a>
-            </div>
-          </div>
-        </template>
-        <template id="groups-template">
-          <div class="groups">
-            <div class="group-block">
-              <a href="#">
-                <h5 id="group-name">Nome do Grupo</h5>
-                <p id="last-msg">Última mensagem...</p>
-              </a>
-            </div>
-          </div>
-        </template>
       </div>
     </main>
 
+    <!-- Area de templates -->
+
+    <template id="friends-template">
+      <div class="friend-block">
+        <img
+          src="https://picsum.photos/40"
+          alt="Avatar do Usuário"
+          class="chat-avatar"
+        />
+        <a href="#">
+          <h5>Username</h5>
+          <p>Status ou última mensagem...</p>
+        </a>
+      </div>
+    </template>
+
+    <template id="groups-template">
+      <div class="group-block">
+        <a href="#">
+          <h5 id="group-name">Nome do Grupo</h5>
+          <p id="last-msg">Última mensagem...</p>
+        </a>
+      </div>
+    </template>
+
+    <template id="post-template">
+      <article class="post">
+        <div id="user-data">
+          <h3>Nome do Usuário</h3>
+          <p class="user-handler">@fulano</p>
+        </div>
+        <div class="post-content">
+          <p>Texto da postagem...</p>
+          <img
+            src="https://picsum.photos/200"
+            alt="imagem do post"
+            class="post-image"
+          />
+        </div>
+        <div class="action-bar">
+          <button class="like-btn">
+            <img src="assets/heart-regular.svg" alt="Curtir" />
+          </button>
+          <button class="comment-btn">
+            <img src="assets/comment-solid.svg" alt="Comentar" />
+          </button>
+          <button class="share-btn">
+            <img src="assets/share-solid.svg" alt="Compartilhar" />
+          </button>
+        </div>
+      </article>
+    </template>
+    <!-- Fim templates -->
     <script src="script.js"></script>
   </body>
 </html>
