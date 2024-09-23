@@ -34,7 +34,7 @@ body {
 }
 
 .logo {
-    margin-right: 10vh;
+    margin-right: 5vh;
 }
 
 .logo a {
@@ -42,7 +42,7 @@ body {
 }
 
 .logo img {
-    width: 45px;
+    width: 40px;
     height: auto;
 }
 
@@ -66,6 +66,7 @@ body {
 }
 
 #search-bar {
+    border: solid red;
     background-color: #352f2f;
     color: #e0e0e0;
     border-color: #4a4a4a;
@@ -73,14 +74,15 @@ body {
     max-width: 400px;
     padding: 8px 15px;
     border: 1px solid lightblue;
-    border-radius: 20px;
-    font-size: 16px;
-    background-color: #f5f8fa;
+    border-radius: 15px;
+    font-size: 14px;
+    background: #666;
 }
 
 #search-bar:focus {
-    border-color: #66e6da;
-    outline: none;
+    color: white;
+    border-color: #6666;
+    outline: #333;
 }
 
 .search-button {
@@ -167,11 +169,29 @@ body {
     background: linear-gradient(to bottom, lightblue, #333);
     border-radius: 15px;
     justify-content: center;
-    position: relative;
-    display: flex;
+    position: sticky;
+    top: 13vh;
     margin-top: 13vh;
     width: 30vw;
-    height: 100vh;
+    height: 90vh;
+}
+.nt-options {
+    width: 100%;
+    height: 7%;
+    background: yellow;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.nt-options button {
+    border: none;
+    background-color: transparent;
+    width: 50%;
+}
+.nt-options button:hover {
+    border: solid red;
+    border-radius: 0 15px;
 }
 
 .flex-container {
@@ -421,4 +441,21 @@ footer a:hover {
         display: block;
         margin: 10px 0;
     }
+}
+/* bloco com classes para testes padrao  */
+.block-test1 {
+    width: 100%;
+    height: 7%;
+    background: yellow;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.block-test2 {
+    background: blue;
+}
+.block-test3 {
+    background: red;
 }
