@@ -1,157 +1,247 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flow Waves</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/logo.svg" />
-  </head>
-  <body>
-    <header class="barra-superior">
-      <div class="logo">
-        <a href="index.html">
-          <img src="assets/logo.svg" alt="Logo" />
-        </a>
-      </div>
-      <div class="search-container">
-        <form action="" method="get">
-          <input type="text" id="search-bar" placeholder="pesquisar..." />
-          <button class="search-button" type="submit">Buscar</button>
-        </form>
-      </div>
-      <div class="options-bar">
-        <div class="option-message">
-          <button id="message-button">
-            <img src="assets/envelope-solid.svg" alt="Mensagens" />
-          </button>
-          <div class="message-window">
-            <h3>Mensagens</h3>
-          </div>
-        </div>
-        <div class="option-notifications">
-          <button id="notify-button">
-            <img src="assets/bell-regular.svg" alt="Notificações" />
-          </button>
-          <div class="notify-window">
-            <h3>Notificações</h3>
-            <div class="notification-obj">
-              <img src="https://picsum.photos/32" alt="avatar-icon" />
-              <div class="notification-content">
-                <p class="sender-name">Gabriel Santarem</p>
-                <p class="notification-text">
-                  Enviou uma nova mensagem para você.
-                </p>
-              </div>
-            </div>
-            <!-- Mais notificações aqui -->
-          </div>
-        </div>
-        <div class="option-config">
-          <button id="config-button">
-            <img
-              src="assets/account_circle_30dp_E0000_FILL0_wght400_GRAD0_opsz24.svg"
-              alt="Configuração"
-            />
-          </button>
-          <div class="config-window">
-            <h3>Configurações</h3>
-            <ul class="list-conf-options">
-              <li><a href="#">Meu perfil</a></li>
-              <li><a href="login/login.html">Login</a></li>
-              <li><a href="#">Configurações</a></li>
-              <li><a href="#">Sair</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <main id="app-page">
-      <div class="watermark-container"></div>
-
-      <!-- Coluna Amigos e Grupos -->
-      <div id="trending">
-        <h3>Trending</h3>
-      </div>
-
-      <!-- Coluna Postagens -->
-      <div id="posts-page">
-        <div id="main-post"></div>
-      </div>
-
-      <!-- Coluna Conversas -->
-
-      <div class="column" id="friends-groups">
-        <div class="groups-chats">
-          <div id="chats-groups">
-            <h3>Conversas</h3>
-            <h3>Grupos</h3>
-          </div>
-          <div id="cg-area"></div>
-        </div>
-      </div>
-    </main>
-
-    <!-- Area de templates -->
-
-    <template id="friends-template">
-      <div class="friend-block">
-        <img
-          src="https://picsum.photos/40"
-          alt="Avatar do Usuário"
-          class="chat-avatar"
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
         />
-        <a href="#">
-          <h5>Username</h5>
-          <p>Status ou última mensagem...</p>
-        </a>
-      </div>
-    </template>
+        <title>Flow Waves</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="assets/logo.svg" />
+    </head>
+    <body>
+        <header class="barra-superior">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.svg" alt="Logo" />
+                </a>
+            </div>
+            <div class="search-container">
+                <form action="" method="get">
+                    <input
+                        type="text"
+                        id="search-bar"
+                        placeholder="pesquisar..."
+                    />
+                    <button class="search-button" type="submit">
+                        Buscar
+                    </button>
+                </form>
+            </div>
+            <div class="options-bar">
+                <div class="option-message">
+                    <button id="message-button">
+                        <img
+                            src="assets/envelope-solid.svg"
+                            alt="Mensagens"
+                        />
+                    </button>
+                    <div class="message-window">
+                        <h3>Mensagens</h3>
+                    </div>
+                </div>
+                <div class="option-notifications">
+                    <button id="notify-button">
+                        <img
+                            src="assets/bell-regular.svg"
+                            alt="Notificações"
+                        />
+                    </button>
+                    <div class="notify-window">
+                        <h3>Notificações</h3>
+                        <div class="notification-obj">
+                            <img
+                                src="https://picsum.photos/32"
+                                alt="avatar-icon"
+                            />
+                            <div class="notification-content">
+                                <p class="sender-name">
+                                    Gabriel Santarem
+                                </p>
+                                <p class="notification-text">
+                                    Enviou uma nova mensagem para
+                                    você.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Mais notificações aqui -->
+                    </div>
+                </div>
+                <div class="option-config">
+                    <button id="config-button">
+                        <img
+                            src="assets/account_circle_30dp_E0000_FILL0_wght400_GRAD0_opsz24.svg"
+                            alt="Configuração"
+                        />
+                    </button>
+                    <div class="config-window">
+                        <h3>Configurações</h3>
+                        <ul class="list-conf-options">
+                            <li><a href="#">Meu perfil</a></li>
+                            <li>
+                                <a href="login/login.html">Login</a>
+                            </li>
+                            <li><a href="#">Configurações</a></li>
+                            <li><a href="#">Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-    <template id="groups-template">
-      <div class="group-block">
-        <a href="#">
-          <h5 id="group-name">Nome do Grupo</h5>
-          <p id="last-msg">Última mensagem...</p>
-        </a>
-      </div>
-    </template>
+        <main id="app-page">
+            <div class="watermark-container"></div>
 
-    <template id="post-template">
-      <article class="post">
-        <div id="user-data">
-          <h3>Nome do Usuário</h3>
-          <p class="user-handler">@fulano</p>
-        </div>
-        <div class="post-content">
-          <p>Texto da postagem...</p>
-          <img
-            src="https://picsum.photos/200"
-            alt="imagem do post"
-            class="post-image"
-          />
-        </div>
-        <div class="action-bar">
-          <button class="like-btn">
-            <img src="assets/heart-regular.svg" alt="Curtir" />
-          </button>
-          <button class="comment-btn">
-            <img src="assets/comment-solid.svg" alt="Comentar" />
-          </button>
-          <button class="share-btn">
-            <img src="assets/share-solid.svg" alt="Compartilhar" />
-          </button>
-        </div>
-      </article>
-    </template>
-    <!-- Fim templates -->
-    <script src="script.js"></script>
-  </body>
+            <div id="row">
+                <!-- Coluna Amigos e Grupos -->
+                <div class="columm" id="trending">
+                    <h3>Trending</h3>
+                </div>
+
+                <!-- Coluna Postagens -->
+                <div class="columm" id="posts-page">
+                    <div id="main-post">
+                        <article class="post">
+                            <div id="user-data">
+                                <h3>Nome do Usuário</h3>
+                                <p class="user-handler">@fulano</p>
+                            </div>
+                            <div class="post-content">
+                                <p>Texto da postagem...</p>
+                                <img
+                                    src="https://picsum.photos/200"
+                                    alt="imagem do post"
+                                    class="post-image"
+                                />
+                            </div>
+                            <div class="action-bar">
+                                <button class="like-btn">
+                                    <img
+                                        src="assets/heart-regular.svg"
+                                        alt="Curtir"
+                                    />
+                                </button>
+                                <button class="comment-btn">
+                                    <img
+                                        src="assets/comment-solid.svg"
+                                        alt="Comentar"
+                                    />
+                                </button>
+                                <button class="share-btn">
+                                    <img
+                                        src="assets/share-solid.svg"
+                                        alt="Compartilhar"
+                                    />
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Coluna Conversas -->
+
+                <div class="column" id="main-cg">
+                    <div class="groups-chats">
+                        <div id="options-cg">
+                            <h3>Conversas</h3>
+                            <h3>Grupos</h3>
+                        </div>
+                        <div id="cg-area">
+                            <div class="friend-block">
+                                <img
+                                    src="https://picsum.photos/40"
+                                    alt="Avatar do Usuário"
+                                    class="chat-avatar"
+                                />
+                                <a href="#">
+                                    <h5>Username</h5>
+                                    <p>
+                                        Status ou última mensagem...
+                                    </p>
+                                </a>
+                                <p class="time-stamp">hora</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Area de templates -->
+        <!-- tempalte de um bloco amigo  -->
+        <template id="friends-template">
+            <div class="friend-block">
+                <img
+                    src="https://picsum.photos/40"
+                    alt="Avatar do Usuário"
+                    class="chat-avatar"
+                />
+                <a href="#">
+                    <h5>Username</h5>
+                    <p>Status ou última mensagem...</p>
+                </a>
+            </div>
+        </template>
+
+        <!-- template de um bloco de grupo -->
+        <template id="groups-template">
+            <div class="group-block">
+                <a href="#">
+                    <h5 id="group-name">Nome do Grupo</h5>
+                    <p id="last-msg">Última mensagem...</p>
+                </a>
+            </div>
+        </template>
+
+        <!-- template de postagem  -->
+        <template id="post-template">
+            <article class="post">
+                <div id="user-data">
+                    <h3>Nome do Usuário</h3>
+                    <p class="user-handler">@fulano</p>
+                </div>
+                <div class="post-content">
+                    <p>Texto da postagem...</p>
+                    <img
+                        src="https://picsum.photos/200"
+                        alt="imagem do post"
+                        class="post-image"
+                    />
+                </div>
+                <div class="action-bar">
+                    <button class="like-btn">
+                        <img
+                            src="assets/heart-regular.svg"
+                            alt="Curtir"
+                        />
+                    </button>
+                    <button class="comment-btn">
+                        <img
+                            src="assets/comment-solid.svg"
+                            alt="Comentar"
+                        />
+                    </button>
+                    <button class="share-btn">
+                        <img
+                            src="assets/share-solid.svg"
+                            alt="Compartilhar"
+                        />
+                    </button>
+                </div>
+            </article>
+        </template>
+        <!-- Fim templates -->
+        <script src="script.js"></script>
+    </body>
 </html>
