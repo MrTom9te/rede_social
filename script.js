@@ -40,8 +40,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
         .getElementById("friends-template")
         .content.cloneNode(true);
       template.querySelector("h5").textContent = user.username;
-      template.querySelector("p").textContent = "Online"; // ou outra mensagem fictícia
-      cgArea.appendChild(template);
+      template.querySelector("p").textContent = "Oi tudo bem";
     });
   })
   .catch((error) => console.error("Erro ao buscar usuários:", error));
