@@ -18,3 +18,19 @@ function setupToggle(buttonId, windowClass) {
 setupToggle("message-button", ".message-window");
 setupToggle("notify-button", ".notify-window");
 setupToggle("config-button", ".config-window");
+
+// tentadno usar uma api
+const apiKey = "1bf24020d57f4e60ad1dfdee34d16ee9";
+const url =
+  "https://newsapi.org/v2/everything?" +
+  "q=Apple&" +
+  "from=2024-09-24&" +
+  "sortBy=popularity&" +
+  "apiKey=1bf24020d57f4e60ad1dfdee34d16ee9";
+const req = new Request(url);
+
+function prinJson(response) {
+  console.log(response.json);
+}
+
+fetch(req).then(prinJson(response));
