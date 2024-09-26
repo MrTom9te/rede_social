@@ -17,14 +17,14 @@
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="style.css" />
-        <link rel="icon" href="assets/logo.svg" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="assets/logos/logo.svg" />
     </head>
     <body>
         <header class="barra-superior">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/logo.svg" alt="Logo" />
+                    <img src="assets/logos/logo.svg" alt="Logo" />
                 </a>
             </div>
             <div class="search-container">
@@ -43,7 +43,7 @@
                 <div class="option-message">
                     <button id="message-button">
                         <img
-                            src="assets/envelope-solid.svg"
+                            src="assets/icons/envelope-solid.svg"
                             alt="Mensagens"
                         />
                     </button>
@@ -54,7 +54,7 @@
                 <div class="option-notifications">
                     <button id="notify-button">
                         <img
-                            src="assets/bell-regular.svg"
+                            src="assets/icons/bell-regular.svg"
                             alt="Notificações"
                         />
                     </button>
@@ -75,13 +75,12 @@
                                 </p>
                             </div>
                         </div>
-                        <!-- Mais notificações aqui -->
                     </div>
                 </div>
                 <div class="option-config">
                     <button id="config-button">
                         <img
-                            src="assets/account_circle_30dp_E0000_FILL0_wght400_GRAD0_opsz24.svg"
+                            src="assets/icons/account_circle_30dp_E0000_FILL0_wght400_GRAD0_opsz24.svg"
                             alt="Configuração"
                         />
                     </button>
@@ -90,7 +89,7 @@
                         <ul class="list-conf-options">
                             <li><a href="#">Meu perfil</a></li>
                             <li>
-                                <a href="login/login.html">Login</a>
+                                <a href="pages/login.html">Login</a>
                             </li>
                             <li><a href="#">Configurações</a></li>
                             <li><a href="#">Sair</a></li>
@@ -104,17 +103,15 @@
             <div class="watermark-container"></div>
 
             <div id="row">
-                <!-- Coluna Amigos e Grupos -->
                 <div class="columm" id="trending">
                     <div class="nt-options">
                         <button id="news-btn">noticias</button>
                         <button id="trd-btn">assuntos</button>
                     </div>
-                    <!-- blocos de noticia -->
 
                     <div class="news-block">
                         <img
-                            src="assets/news-image.jp"
+                            src="assets/images/news-image.jpg"
                             alt="Imagem da notícia"
                             class="news-image"
                         />
@@ -127,7 +124,6 @@
                     </div>
                 </div>
 
-                <!-- Coluna Postagens -->
                 <div class="columm" id="posts-page">
                     <div id="main-post">
                         <article class="post">
@@ -146,19 +142,19 @@
                             <div class="action-bar">
                                 <button class="like-btn">
                                     <img
-                                        src="assets/heart-regular.svg"
+                                        src="assets/icons/heart-regular.svg"
                                         alt="Curtir"
                                     />
                                 </button>
                                 <button class="comment-btn">
                                     <img
-                                        src="assets/comment-solid.svg"
+                                        src="assets/icons/comment-solid.svg"
                                         alt="Comentar"
                                     />
                                 </button>
                                 <button class="share-btn">
                                     <img
-                                        src="assets/share-solid.svg"
+                                        src="assets/icons/share-solid.svg"
                                         alt="Compartilhar"
                                     />
                                 </button>
@@ -166,8 +162,6 @@
                         </article>
                     </div>
                 </div>
-
-                <!-- Coluna Conversas -->
 
                 <div class="column" id="main-cg">
                     <div class="groups-chats">
@@ -195,9 +189,7 @@
                 </div>
             </div>
         </main>
-
-        <!-- Area de templates -->
-        <!-- tempalte de um bloco amigo  -->
+        <!-- template area -->
         <template id="friends-template">
             <div class="friend-block">
                 <img
@@ -212,7 +204,6 @@
             </div>
         </template>
 
-        <!-- template de um bloco de grupo -->
         <template id="groups-template">
             <div class="group-block">
                 <a href="#">
@@ -222,7 +213,6 @@
             </div>
         </template>
 
-        <!-- template de postagem  -->
         <template id="post-template">
             <article class="post">
                 <div id="user-data">
@@ -240,26 +230,26 @@
                 <div class="action-bar">
                     <button class="like-btn">
                         <img
-                            src="assets/heart-regular.svg"
+                            src="assets/icons/heart-regular.svg"
                             alt="Curtir"
                         />
                     </button>
                     <button class="comment-btn">
                         <img
-                            src="assets/comment-solid.svg"
+                            src="assets/icons/comment-solid.svg"
                             alt="Comentar"
                         />
                     </button>
                     <button class="share-btn">
                         <img
-                            src="assets/share-solid.svg"
+                            src="assets/icons/share-solid.svg"
                             alt="Compartilhar"
                         />
                     </button>
                 </div>
             </article>
         </template>
-        <!-- Fim templates -->
-        <script src="script.js"></script>
+
+        <script src="js/script.js"></script>
     </body>
 </html>
