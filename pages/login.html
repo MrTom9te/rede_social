@@ -1,46 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>Login page</header>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link rel="stylesheet" href="../css/login.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <main alt="pagina de login">
+            <div class="login-container">
+                <form class="login-form" action="/login" method="get">
+                    <div class="input-group">
+                        <label for="username">Usuario:</label>
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Nome de usuário.."
+                            required
+                        />
+                    </div>
 
-    <main>
-      <div class="login-container">
-        <form class="login-form" action="/login" method="get">
-          <div class="input-group">
-            <label for="username">Usuario:</label>
-            <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="Nome de usuário.."
-              required
-            />
-          </div>
-
-          <div class="input-group">
-            <label for="password">Senha:</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Senha"
-              required
-            />
-          </div>
-          <div class="input-group">
-            <button type="submit">Entar</button>
-          </div>
-          <div class="extras-options">
-            <a href="#">Esqueci minha senha </a>
-          </div>
-        </form>
-      </div>
-    </main>
-  </body>
+                    <div class="input-group">
+                        <label for="password">Senha:</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Senha"
+                            required
+                        />
+                    </div>
+                    <div class="input-group">
+                        <button type="submit">Entar</button>
+                    </div>
+                    <div class="extras-options">
+                        <a href="#">Esqueci minha senha </a>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </body>
 </html>

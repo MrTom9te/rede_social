@@ -1,97 +1,148 @@
 body {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
+    font-family: "Poppins", "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #363636;
+    color: #e0e0e0;
 }
-
 .hero-header {
-  background-image: url("assets/hero-background.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("assets/hero-background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-
 .navbar {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 50px;
-  border: dashed blueviolet;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(106, 243, 229, 0.8);
+    z-index: 1000;
 }
-
 .logo img {
-  height: 50px;
+    height: 40px;
 }
-
 .menu a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-size: 18px;
-  border: dashed black;
+    color: #363636;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
 }
-
+.menu a:hover {
+    color: #00c6ff;
+}
 .hero-content {
-  max-width: 600px;
-  border: deepskyblue;
+    max-width: 600px;
 }
-
+.hero-content img {
+    width: 150px;
+    margin-bottom: 20px;
+}
 .hero-content h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-  border: dashed blue;
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #6af3e5;
 }
-
 .hero-content p {
-  border: double blueviolet;
-  font-size: 20px;
-  margin-bottom: 30px;
-  color: black;
-  font-style: italic;
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #e0e0e0;
 }
-
 .cta-button {
-  background-color: blueviolet;
-  color: white;
-  padding: 12px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-size: 18px;
-  transition: background-color 0.3s;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
 }
-
 .cta-button:hover {
-  background-color: darkviolet;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 198, 255, 0.3);
 }
-
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #6af3e5;
+}
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #6af3e5;
+    margin: 10px auto;
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
 section#about {
-  padding: 60px 20px;
-  background-color: #f9f9f9;
-  text-align: center;
-  border: dashed red;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #2e6c70, #363636);
+    text-align: center;
 }
-
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  border: dashed lightblue;
+    max-width: 800px;
+    margin: 0 auto;
 }
-
+section#about h2 {
+    color: #6af3e5;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+section#about p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
 footer {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #333;
-  color: white;
+    text-align: center;
+    padding: 30px 0;
+    background-color: #2e6c70;
+    color: #e0e0e0;
 }
-
-footer p {
-  margin: 0;
+.footer-links {
+    margin-bottom: 20px;
+}
+.footer-links a {
+    color: #6af3e5;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+.footer-links a:hover {
+    color: #00c6ff;
 }
