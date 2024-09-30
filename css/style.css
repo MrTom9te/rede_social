@@ -1,4 +1,8 @@
 /* Base styles */
+* {
+    font-family: "Poppins";
+}
+
 body {
     font-family: "Poppins", "Roboto", sans-serif;
     margin: 0;

@@ -1,5 +1,9 @@
+* {
+    font-style: "Poppins";
+}
 body {
     background: #333;
+    font-family: "Poppins" sans-serif;
 }
 main {
     margin-top: 12%;
