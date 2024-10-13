@@ -1,6 +1,7 @@
 /* Base styles */
 * {
     font-family: "Poppins";
+    box-sizing: border-box;
 }
 
 body {
@@ -477,4 +478,60 @@ footer a:hover {
 }
 .block-test3 {
     background: red;
+}
+@media (max-width: 768px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    #row {
+        padding: 0;
+        display: flex;
+        flex-direction: row; /* Mantenha em linha, se necessário */
+        flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se não houver espaço suficiente */
+        justify-content: space-between; /* Distribui espaço entre os itens */
+    }
+
+    #main-post {
+        position: fixed;
+
+        width: 90%; /* Ocupar 90% da largura da tela */
+        margin: 0 auto; /* Centraliza o main-post */
+        display: flex;
+        flex-direction: column; /* Mantém os itens dentro em coluna */
+        align-items: stretch; /* Faz com que os itens ocupem toda a largura disponível */
+    }
+
+    .post {
+        width: 100%; /* Garante que cada post ocupe a largura total do main-post */
+        margin-bottom: 10px; /* Espaço entre os posts */
+    }
+
+    .mobile-hidden {
+        position: fixed;
+        visibility: hidden;
+    }
+
+    .options-bar {
+        flex-direction: column; /* Coloca as opções em coluna */
+        align-items: center; /* Centraliza */
+    }
+}
+
+/* Para telas ainda menores */
+@media (max-width: 480px) {
+    .friend-block {
+        flex-direction: column; /* Coloca os amigos em coluna */
+        width: 100%; /* Largura total */
+    }
+
+    /* Ajustes nos textos e botões para legibilidade */
+    .friend-block a h5 {
+        font-size: 14px; /* Tamanho de fonte ajustado */
+    }
+
+    .action-bar button {
+        width: 40px; /* Botões maiores */
+        height: 40px;
+    }
 }

@@ -1,18 +1,15 @@
 * {
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
 }
 body {
-    font-family: "Poppins", "Roboto", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #363636;
     color: #e0e0e0;
 }
 .hero-header {
-    background: linear-gradient(
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ),
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("assets/hero-background.jpg");
     background-size: cover;
     background-position: center;
@@ -30,7 +27,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 20px 10%; /* Alterado para usar porcentagem */
     background-color: rgba(106, 243, 229, 0.8);
     z-index: 1000;
 }
@@ -50,6 +47,7 @@ body {
 }
 .hero-content {
     max-width: 600px;
+    padding: 0 20px; /* Adicionado padding */
 }
 .hero-content img {
     width: 150px;
@@ -148,4 +146,35 @@ footer {
 }
 .footer-links a:hover {
     color: #00c6ff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px 5%; /* Reduzido para telas menores */
+    }
+    .menu {
+        margin-top: 10px;
+    }
+    .hero-content h1 {
+        font-size: 36px; /* Tamanho menor para telas pequenas */
+    }
+    .hero-content p {
+        font-size: 18px; /* Tamanho menor para telas pequenas */
+    }
+    .hero-content img {
+        width: 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu a {
+        font-size: 16px; /* Tamanho menor para telas menores */
+    }
+    .cta-button {
+        padding: 10px 20px; /* Ajustar o padding do botão */
+        font-size: 16px; /* Tamanho menor para telas menores */
+    }
 }

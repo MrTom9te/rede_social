@@ -1,23 +1,29 @@
 * {
-    font-style: "Poppins";
+    font-family: "Poppins", sans-serif;
 }
+
 body {
     background: #333;
-    font-family: "Poppins" sans-serif;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
 main {
     margin-top: 12%;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh; /* Ajusta para garantir que o conteúdo ocupe a altura total da tela */
 }
 
 .login-container {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Usa 90% da largura da tela em dispositivos menores */
+    max-width: 400px; /* Limita o tamanho máximo em telas grandes */
 }
 
 .login-form h2 {
@@ -27,7 +33,6 @@ main {
 
 .input-group {
     margin-bottom: 15px;
-    margin-right: 15px;
 }
 
 .input-group label {
@@ -71,4 +76,37 @@ main {
 
 .extra-options a:hover {
     text-decoration: underline;
+}
+
+/* Media queries para diferentes tamanhos de tela */
+@media (max-width: 768px) {
+    main {
+        margin-top: 5%;
+    }
+
+    .login-container {
+        width: 90%;
+    }
+
+    .input-group input,
+    .input-group button {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 15px;
+    }
+
+    .input-group input,
+    .input-group button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .login-form h2 {
+        font-size: 20px;
+    }
 }
