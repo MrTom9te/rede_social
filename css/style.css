@@ -13,7 +13,9 @@ body {
     color: #ffffff;
     display: flex;
 }
-
+#mobile-header {
+    display: none;
+}
 .container {
     display: flex;
     width: 100%;
@@ -29,8 +31,10 @@ body {
     position: sticky;
     top: 0;
     padding: 20px;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
 }
 
 .menu-options {
@@ -54,7 +58,9 @@ body {
 }
 
 .user-icon img {
-    width: 60px;
+    width: 50px;
+    height: 50px;
+    display: block;
 }
 
 .menu nav ul {
@@ -293,6 +299,23 @@ body {
         flex-direction: column;
     }
 
+    #mobile-header {
+        border: dashed red;
+        background: #00ced1;
+        display: flex;
+        padding: 1rem;
+        width: 100%;
+        height: 3rem;
+        position: fixed;
+        z-index: 1;
+    }
+    .user-icon {
+        height: 100%;
+        border: dashed red;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
     .menu {
         width: 60%;
         position: absolute;
@@ -304,13 +327,6 @@ body {
 
     .menu-options {
         display: none;
-    }
-
-    .user-icon {
-        cursor: pointer;
-        position: absolute;
-        top: 1.3rem;
-        right: 1.3rem;
     }
 
     .menu nav ul {
@@ -327,7 +343,7 @@ body {
 
     .menu nav ul li a {
         font-size: 24px;
-        display: flex;
+        display: inline-flex;
         align-items: center;
         padding: 10px;
         border-radius: 8px;
