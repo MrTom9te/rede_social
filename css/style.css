@@ -18,11 +18,12 @@ body {
     display: flex;
     width: 100%;
     margin: 0 auto;
+    flex-grow: 1;
 }
 
 /* Header e Nav */
 .menu {
-    width: 275px;
+    width: 26%;
     height: 100vh;
     background: #6af3e5bd;
     position: sticky;
@@ -32,13 +33,28 @@ body {
     flex-direction: column;
 }
 
+.menu-options {
+    height: 90%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-options {
+    height: 100%;
+}
+
 .logo {
     margin-bottom: 20px;
 }
 
 .logo img {
-    width: 40px;
+    width: 60px;
     height: auto;
+}
+
+.user-icon img {
+    width: 60px;
 }
 
 .menu nav ul {
@@ -59,6 +75,7 @@ body {
     padding: 10px;
     border-radius: 9999px;
     transition: background-color 0.2s;
+    font-size: 2rem;
 }
 
 .menu nav ul li a:hover {
@@ -213,7 +230,7 @@ body {
 
 /* Trending Section */
 #trending {
-    width: 350px;
+    width: 40%;
     padding: 20px;
 }
 
@@ -273,49 +290,60 @@ body {
 
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Mantenha a direção em coluna */
+        flex-direction: column;
     }
 
     .menu {
-        width: 100%; /* Mantém a largura do menu em 100% */
-        height: auto;
-        position: static;
-        padding: 10px;
+        width: 60%;
+        position: absolute;
+        left: -100%;
+        transition: left 0.3s ease-in-out;
+        z-index: 1;
+        padding: 0.7rem;
+    }
+
+    .menu-options {
+        display: none;
+    }
+
+    .user-icon {
+        cursor: pointer;
+        position: absolute;
+        top: 1.3rem;
+        right: 1.3rem;
     }
 
     .menu nav ul {
         display: flex;
-        flex-direction: column; /* Altera para coluna para melhor alinhamento */
-        align-items: flex-start; /* Alinha os itens do menu à esquerda */
-        padding: 0; /* Remove o padding */
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
     }
 
     .menu nav ul li {
-        margin: 5px 0; /* Espaçamento vertical entre os itens */
-        width: 100%; /* Itens do menu ocupam toda a largura */
+        margin: 5px 0;
+        width: 100%;
     }
 
     .menu nav ul li a {
-        display: flex; /* Mantém a flexibilidade no layout dos links */
-        align-items: center; /* Alinha os ícones e texto no centro */
-        padding: 10px; /* Adiciona padding para melhor clique */
-        border-radius: 8px; /* Adiciona bordas arredondadas aos links */
-        transition: background-color 0.3s; /* Suaviza a transição */
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-radius: 8px;
+        transition: background-color 0.3s;
     }
 
     .menu nav ul li a:hover {
-        background-color: rgba(255, 255, 255, 0.1); /* Efeito de hover */
-    }
-
-    .msg-btn {
-        display: none; /* Mantém o botão de mensagem escondido */
+        background-color: rgba(255, 255, 255, 0.1);
     }
 
     #app-page {
-        flex-direction: column; /* Garante a estrutura em coluna */
+        flex-direction: column;
     }
 
     #posts-page {
-        border: none; /* Remove a borda do posts-page */
+        width: 99%;
+        border: none;
     }
 }
