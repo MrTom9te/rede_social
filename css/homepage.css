@@ -27,12 +27,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%; /* Alterado para usar porcentagem */
+    padding: 20px 3%; /* Alterado para usar porcentagem */
     background-color: rgba(106, 243, 229, 0.8);
     z-index: 1000;
 }
 .logo img {
-    height: 40px;
+    height: 100%;
 }
 .menu a {
     color: #363636;
