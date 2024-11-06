@@ -102,3 +102,117 @@ button[type="submit"]:hover {
         font-size: 0.8rem;
     }
 }
+.input-erro {
+    border-color: #ff3333 !important;
+    background-color: #fff5f5;
+}
+
+.erro-mensagem {
+    color: #ff3333;
+    font-size: 0.8em;
+    margin-top: 5px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Animação suave para mensagens de erro */
+.erro-mensagem {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para o hover dos inputs */
+.input-group input:hover {
+    border-color: #4a90e2;
+}
+
+/* Estilo para o focus dos inputs */
+.input-group input:focus {
+    border-color: #2c5282;
+    box-shadow: 0 0 0 2px rgba(44, 82, 130, 0.2);
+}
+
+/* Estilo para o botão quando desabilitado */
+.input-group button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+/* Adicione isso ao seu login.css */
+
+.error-message {
+    color: #ff4444;
+    font-size: 0.8em;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+
+.global-error {
+    background-color: #ff4444;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+}
+
+.success-message {
+    background-color: #00c851;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+}
+
+.input-group input.error {
+    border-color: #ff4444;
+    box-shadow: 0 0 0 2px rgba(255, 68, 68, 0.1);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Efeito de loading no botão */
+button[type="submit"].loading {
+    position: relative;
+    color: transparent;
+}
+
+button[type="submit"].loading::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
