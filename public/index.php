@@ -1,10 +1,13 @@
+<?php
+require_once __DIR__ . "/../vendor/autoload.php"; ?>
+
 <!doctype html>
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Flow Waves - Conecte-se</title>
-        <link rel="stylesheet" href="../css/homepage.css" />
+        <link rel="stylesheet" href="css/homepage.css" />
     </head>
     <body>
         <header class="hero-header">
@@ -12,13 +15,13 @@
                 <div class="logo">
                     <a href="#"
                         ><img
-                            src="../assets/logo_48x48.svg"
+                            src="assets/logo_48x48.svg"
                             alt="Flow Waves Logo"
                     /></a>
                 </div>
                 <div class="menu">
-                    <a href="../pages/login.html">Login</a>
-                    <a href="pages/cadastro.html">Cadastro</a>
+                    <a href="login.php">Login</a>
+                    <a href="cadastro.php">Cadastro</a>
                 </div>
             </nav>
             <div class="hero-content">

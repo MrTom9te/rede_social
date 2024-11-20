@@ -1,0 +1,19 @@
+{
+    "name": "tomate/rede_social",
+    "description": "Projeto faculdade estacio",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "Tomate\\RedeSocial\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tom9te",
+            "email": "gabriel_santarem@outlook.com"
+        }
+    ],
+    "require": {
+        "catfan/medoo": "^2.1"
+    }
+}

@@ -1,10 +1,17 @@
+<?php
+session_start();
+if (isset($_SESSION["success"])) {
+    echo '<div class="success">' . $_SESSION["success"] . "</div>";
+    unset($_SESSION["success"]);
+}
+?>
 <!doctype html>
 <html lang="en">
     <head>
         <link rel="stylesheet" href="style.css" />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../css/login.css" />
+        <link rel="stylesheet" href="css/login.css" />
 
         <!-- fonte da pagina  -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />

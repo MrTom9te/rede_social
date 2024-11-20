@@ -1,3 +1,12 @@
+<?php
+
+//ainda nao funciona
+if (!isset($_SESSION["usuario_id"])) {
+    // Redireciona para login se não estiver logado
+    header("Location: login.php");
+    exit();
+} ?>
+
 <!doctype html>
 <html lang="pt-BR">
     <head>
