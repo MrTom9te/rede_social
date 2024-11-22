@@ -1,6 +1,6 @@
 <?php
 
-//ainda nao funciona
+//agora funciona mais ou menos :{
 if (!isset($_SESSION["usuario_id"])) {
     // Redireciona para login se não estiver logado
     header("Location: login.php");

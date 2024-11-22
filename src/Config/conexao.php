@@ -1,6 +1,8 @@
 <?php
 function conexao_db()
 {
+    //caso esteja rodadno dentro do docker o host sera no nome do serviço que no caso é db
+    // caso contrario mude para localhost
     $dsn = "pgsql:host=localhost;port=5432;dbname=rede_social";
     $username = "postgres";
     $password = "postgres";
